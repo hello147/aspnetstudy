@@ -1,0 +1,25 @@
+﻿
+@{
+    Layout = null;
+}
+@model mymvc2.Models.SysUser
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+</head>
+<body>
+    <div>
+      @Html.LabelFor(model=>model.UserName)
+        @Html.EditorFor(Model=>Model.UserName)
+    </div>
+    <div>
+        @Html.LabelFor(Model=>Model.Password)
+        @Html.PasswordFor(Model=>Model.Password)
+    </div>Index
+    <div> <input type="submit" value="Save"/></div>
+    <div>@Html.ActionLink("Back to List","")</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "登录页";
+}
+
+@using (Html.BeginForm("login", "Account", FormMethod.Post)) { }
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/signin.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="loginState">
+        @ViewBag.LoginState
+    </div>
+    <div class="container">
+        @using (Html.BeginForm("login", "Account", FormMethod.Post, new { @class = "form-signin" }))
+        {
+            <h2 class="form-signin-heading">请输入</h2>
+            <input type="email" class="form-control" id="InputEmail1" name="InputEmail1" placeholder="邮箱">
+            <input type="password" class="form-control" id="InputPassword1" name="InputPassword1" placeholder="密码">
+
+            <label class="checkbox">
+                <input type="checkbox" value="remember-me"> 记住密码
+            </label>
+            <button type="submit" class="btn btn-lg btn-primary btn-block">Sign in</button>
+        }
+       
+    </div>
+    
+
+</body>
+</html>

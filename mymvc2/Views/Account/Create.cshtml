@@ -1,0 +1,40 @@
+﻿
+@{
+    Layout = null;
+}
+@model mymvc2.Models.SysUser
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+    <div>
+        <h2>Create</h2>
+        @using (Html.BeginForm())
+        {
+            <div>
+                @Html.LabelFor(Model => Model.UserName)
+                @Html.EditorFor(Model => Model.UserName)
+            </div>
+            <div>
+                @Html.LabelFor(Model => Model.Email)
+                @Html.EditorFor(Model => Model.Email)
+            </div>
+            <div>
+                @Html.LabelFor(Model => Model.Password)
+                @Html.PasswordFor(Model => Model.Password)
+
+            </div>
+            <div>
+                <input type="submit" value="Create" />
+            </div>
+        }
+    </div>
+
+    
+    <div>  @Html.ActionLink("Back to List", "Index")</div>
+</body>
+</html>
